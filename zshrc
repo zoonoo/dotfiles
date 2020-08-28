@@ -1,3 +1,8 @@
+# added when installing pure-prompt
+fpath+=('/home/zoonoo/.npm-global/lib/node_modules/pure-prompt/functions')
+# fpath+=$HOME/.zsh/pure
+
+
 autoload -U promptinit; promptinit
 
 # optionally define some options
@@ -16,11 +21,13 @@ zstyle :prompt:pure:git:stash show yes
 
 prompt pure
 
+
 # Customize to your needs...
 for config_file ($HOME/.zsh/zsh.d/*.zsh) source $config_file
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH=~/.npm-global/bin:$PATH
 export GOPATH="$HOME/workspace"
 
 # export CLICOLOR=1
